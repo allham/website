@@ -1,167 +1,111 @@
-@import url('https://fonts.googleapis.com/css2family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap'); */
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    text-decoration: none;
+    color: #fff;
     list-style: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: sans-serif;
 }
-body {
-    min-height: 100vh;
-    min-width: 400px;
-    overflow: hidden;
-}
-header {
-    display: flex;
-    align-items:center;
-    justify-content: flex-end;
-    width: 100%;
-    height: 80px;
-    padding: 0 5%;
-    color: #311822;
-    font-size: 18px;
-}
-header .logo {
-    color: #311822;
-    /* color: #fff; */
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-right: auto;
-}
-header nav {
-    display: flex;
-    align-items: center;
-}
-header nav .menu {
-    display: flex;
-    align-items: center;
-}
-header nav .menu li a {
-    position: relative;
-    color: #311822;
-    /* color: #fff; */
-    font-size: 1rem;
-    font-weight: 600;
-    margin-left: 40px;
-    border-radius: 0.4rem;
-    transition: color 0.4s ease;
-}
-header nav .menu li a:hover {
-    /* background: #f3de88; */
-    /* color: #311822; */
-    color: #fff;  
-}
-header nav #toggle {
-    /* color: #fff; */
-    font-size: 1.3rem;
-    margin-left: 80px;
-    cursor:pointer;
-}
-.home {
-    padding: 0 5%;
-    color: #311822;
-    text-align:center;
-}
-.home h1{
-    color: #311822;
-    /* color: #fff; */
-    text-transform: uppercase;
-    font-size: 6rem;
-    font-weight:700;
-    letter-spacing: 10px;
-}
-.home h2 {
-    color: #311822;
-    /* color:#fff; */
-    font-size: 1.8rem;
-    font-weight: 300;
-    margin-bottom: 25px;
-}
-.home .images .img1,
-.home .images .img2,
-.home .images .img3,
-.home .images .img4,
-.home .images .img5,
-.home .images .img6,
-.home .images .img7 {
-    width: 100%;
+.container {
     height: 100vh;
+    width: 100%;
+    position: relative;
+    background: #000;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.container::before {
+    content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: -10;
+    height: 330px;
+    width:330px;
+    border-radius: 50%;
+    background: linear-gradient(#08ffe6, #fcd200);
+    transform: translate(-490px, -150px);
 }
-.home .images .img1 {
-    background: url(images/img1.avif);
-    background-position: center;
-    background-size: cover;
+.container::after {
+    content: '';
+    position: absolute;
+    height: 300px;
+    width:300px;
+    border-radius: 50%;
+    background: linear-gradient(#fcd200, #fc002e);
+    transform: translate(490px, 170px);
 }
-.home .images .img2 {
-    background: url(images/img2.avif);
-    background-position: center;
-    background-size: cover;
-}.home .images .img3 {
-    background: url(images/img3.avif);
-    background-position: center;
-    background-size: cover;
-}.home .images .img4 {
-    background: url(images/img4.avif);
-    background-position: center;
-    background-size: cover;
-}.home .images .img5 {
-    background: url(images/img5.avif);
-    background-position: center;
-    background-size: cover;
-}.home .images .img6 {
-    background: url(images/img6.avif);
-    background-position: center;
-    background-size: cover;
-}.home .images .img7{
-    background: url(images/img7.avif);
-    background-position: center;
-    background-size: cover;
+.container h1 {
+    position: absolute;
+    left: 320px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
-@media(max-width:800px) {
-    .home {
-        min-width: 390px;
-    }
-    .home h1 {
-        margin-top: 5px;
-        font-size: 4rem;
-        font-weight: 700;
-    }
-    .home h2 {
-        margin-top: 10px;
-    }
-    header nav .menu {
-        flex-direction: column;
-        row-gap: 2rem;
-        position:absolute;
-        left: -00%;
-        top: 80px;
-        width: 100%;
-        padding-top: 110px;
-        background: #311822;
-        height: calc(100vh - 80px);
-        z-index: 10;
-        transition: left 0.4s ease;
-    }
-    header nav .menu li a {
-        margin-left: unset;
-        font-size: 2rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: #f3de88;
-        /* color: #fff; */
-        width: 250px;
-        height: 60px;
-        line-height: 60px;
-        display: block;
-        text-align: center;
-        border-radius: 5px;
-        transition: 0.25 ease;  
-    }
+.container .ball-1 {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: #04f504;
+    transform: translate(250px, 200px);
+    position: absolute;
+}
+.container .ball-2 {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background: #08e2ff;
+    transform: translate(-10px, -220px);
+    position: absolute;
+}
+.container .ball-3 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #ffc404;
+    transform: translate(150px, 250px);
+    position: absolute;
+}
+.container .box {
+    height: 86vh;
+    width: 75%;
+    padding: 0, 20px;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 10;
+    display: flex;
+    position: relative;
+    border-radius: 20px;
+    border: solid 2px rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(25px); /* important*/
+    box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.25);
+}
+.container .box nav {
+    height: 7%;
+    width: 95%;position: absolute;
+    display: flex;
+    align-items: cem=nter;
+    justify-content: space-between;
+    margin: 15px auto;
+    padding: 20px;
+}
+.container .box nav ul li {
+    display: inline-block;
+    padding: 0 20px;
+}
+.container .box nav ul li a {
+    font-size: 13px;
+    cursor: pointer;
+}
+.container .box nav ul li a:hover {
+    color: #ffc404;
+}
+.container .box nav .logo {
+    font-size:35px;
+    color: #000;
+    margin-top: 10px;
+    margin-left: 20px;  
+}
+h3 span {
+    padding-right: 8px;
+
 }
